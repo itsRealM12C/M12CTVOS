@@ -37,6 +37,7 @@ body {
   border-radius: 10px;
   font-size: 24px;
   transition: transform 0.2s;
+  cursor: pointer;
 }
 
 .box.selected {
@@ -44,24 +45,31 @@ body {
   transform: scale(1.2);
 }
 
-.web-view {
-  display: none;
-  background-color: #333;
-  color: #fff;
+.iframe-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
-  border-radius: 10px;
-  text-align: center;
 }
 
-button {
+#back-button {
+  margin-bottom: 20px;
   padding: 10px 20px;
+  font-size: 18px;
   background-color: #ff6347;
+  color: #fff;
   border: none;
   border-radius: 5px;
-  color: white;
   cursor: pointer;
 }
 
-button:hover {
+#back-button:hover {
   background-color: #ff4500;
 }
