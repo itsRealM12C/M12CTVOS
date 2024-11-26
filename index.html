@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Android TV-like Navigation</title>
+  <title>Android TV-like Navigation with Iframe</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,16 +25,11 @@
     </div>
   </div>
 
-  <!-- Dynamic content sections for each item -->
-  <div id="content-1" class="content" style="display: none;">This is content for Item 1 (e.g., a website or information)</div>
-  <div id="content-2" class="content" style="display: none;">This is content for Item 2</div>
-  <div id="content-3" class="content" style="display: none;">This is content for Item 3</div>
-  <div id="content-4" class="content" style="display: none;">This is content for Item 4</div>
-  <div id="content-5" class="content" style="display: none;">This is content for Item 5</div>
-  <div id="content-6" class="content" style="display: none;">This is content for Item 6</div>
-  <div id="content-7" class="content" style="display: none;">This is content for Item 7</div>
-  <div id="content-8" class="content" style="display: none;">This is content for Item 8</div>
-  <div id="content-9" class="content" style="display: none;">This is content for Item 9</div>
+  <!-- Iframe will display content -->
+  <div id="iframe-container" class="iframe-container" style="display: none;">
+    <button id="back-button">Back</button>
+    <iframe id="iframe" style="width: 100%; height: 80vh; border: none;"></iframe>
+  </div>
 
   <script src="script.js"></script>
 </body>
