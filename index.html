@@ -25,10 +25,10 @@
     </div>
   </div>
 
-  <div class="web-view" id="web-view">
-    <button id="back-button">Go Back</button>
-    <h1>Web View - Selected Item</h1>
-    <p>Welcome to the selected item's page!</p>
+  <!-- Iframe will be displayed here when an item is selected -->
+  <div class="iframe-container" id="iframe-container" style="display: none;">
+    <button id="back-button">Back</button>
+    <iframe id="iframe" style="width: 100%; height: 80vh; border: none;"></iframe>
   </div>
 
   <script src="script.js"></script>
