@@ -1,7 +1,7 @@
 const items = document.querySelectorAll('.box');
 let selectedIndex = 0;
 
-// Define the URLs for each item
+// Define the URLs for each item (You can modify these URLs to actual games or apps)
 const urls = [
   'https://example.com',      // Item 1
   'https://google.com',       // Item 2
