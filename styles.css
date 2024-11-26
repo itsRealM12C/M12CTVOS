@@ -12,6 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
 }
 
 .container {
@@ -41,4 +42,26 @@ body {
 .box.selected {
   background-color: #ff6347;
   transform: scale(1.2);
+}
+
+.web-view {
+  display: none;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff4500;
 }
