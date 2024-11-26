@@ -37,12 +37,21 @@ document.addEventListener('keydown', (e) => {
   items[selectedIndex].classList.add('selected');
 });
 
-// Enter key for selecting an item and navigating to its URL
+// Enter key for selecting an item and displaying the iframe
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
     // Get the URL associated with the selected item
     const url = urls[selectedIndex];
-    // Open the selected URL in the current tab
-    window.location.href = url;
+    
+    // Show the iframe container and load the selected URL in the iframe
+    document.getElementById('iframe-container').style.display = 'flex';
+    document.getElementById('iframe').src = url;
   }
+});
+
+// Back button to return to the main grid
+document.getElementById('back-button').addEventListener('click', () => {
+  // Hide the iframe and show the main grid
+  document.getElementById('iframe-container').style.display = 'none';
+  document.getElementById('iframe').src = ''; // Clear the iframe content
 });
