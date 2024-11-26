@@ -1,9 +1,9 @@
 const items = document.querySelectorAll('.box');
 let selectedIndex = 0;
 
-// Define URLs for each item (you can modify these URLs for actual content)
+// Define URLs for each item
 const urls = [
-  'https://example.com',      // Item 1
+  'https://youtube.com/tv?env_forceFullAnimation=1',      // Item 1
   'https://google.com',       // Item 2
   'https://youtube.com',      // Item 3
   'https://github.com',       // Item 4
@@ -40,7 +40,6 @@ document.addEventListener('keydown', (e) => {
 // Enter key for selecting an item and displaying the iframe
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
-    // Get the URL for the selected item
     const url = urls[selectedIndex];
     
     // Show the iframe container and load the selected URL into the iframe
@@ -51,12 +50,11 @@ document.addEventListener('keydown', (e) => {
 
 // Back button to return to the grid
 document.getElementById('back-button').addEventListener('click', () => {
-  // Hide the iframe and show the main grid
   document.getElementById('iframe-container').style.display = 'none';
   document.getElementById('iframe').src = ''; // Clear the iframe content
 });
 
-// Escape key to go back to the grid (same as Back button)
+// Escape key to go back to the grid
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     document.getElementById('iframe-container').style.display = 'none';
