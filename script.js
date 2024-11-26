@@ -1,17 +1,17 @@
 const items = document.querySelectorAll('.box');
 let selectedIndex = 0;
 
-// Define content for each item
-const contentIds = [
-  'content-1',  // Item 1
-  'content-2',  // Item 2
-  'content-3',  // Item 3
-  'content-4',  // Item 4
-  'content-5',  // Item 5
-  'content-6',  // Item 6
-  'content-7',  // Item 7
-  'content-8',  // Item 8
-  'content-9',  // Item 9
+// Define the URLs for each item
+const urls = [
+  'https://example.com',      // Item 1
+  'https://google.com',       // Item 2
+  'https://youtube.com',      // Item 3
+  'https://github.com',       // Item 4
+  'https://twitter.com',      // Item 5
+  'https://facebook.com',     // Item 6
+  'https://instagram.com',    // Item 7
+  'https://linkedin.com',     // Item 8
+  'https://reddit.com',       // Item 9
 ];
 
 // Initialize the first item as selected
@@ -37,22 +37,29 @@ document.addEventListener('keydown', (e) => {
   items[selectedIndex].classList.add('selected');
 });
 
-// Enter key for selecting an item and displaying the content
+// Enter key for selecting an item and displaying the iframe
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
-    // Hide all content sections first
-    document.querySelectorAll('.content').forEach(content => content.style.display = 'none');
+    // Get the URL for the selected item
+    const url = urls[selectedIndex];
     
-    // Show the content for the selected item
-    const contentId = contentIds[selectedIndex];
-    document.getElementById(contentId).style.display = 'flex';
+    // Show the iframe container and load the selected URL into the iframe
+    document.getElementById('iframe-container').style.display = 'flex';
+    document.getElementById('iframe').src = url;
   }
 });
 
-// Escape key for going back to the grid
+// Back button to return to the grid
+document.getElementById('back-button').addEventListener('click', () => {
+  // Hide the iframe and show the main grid
+  document.getElementById('iframe-container').style.display = 'none';
+  document.getElementById('iframe').src = ''; // Clear the iframe content
+});
+
+// Escape key to go back to the grid (same as Back button)
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
-    // Hide all content sections
-    document.querySelectorAll('.content').forEach(content => content.style.display = 'none');
+    document.getElementById('iframe-container').style.display = 'none';
+    document.getElementById('iframe').src = ''; // Clear the iframe content
   }
 });
