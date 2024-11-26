@@ -1,9 +1,7 @@
 const items = document.querySelectorAll('.box');
-const webView = document.getElementById('web-view');
-const backButton = document.getElementById('back-button');
 let selectedIndex = 0;
 
-// Define the URLs associated with each item
+// Define URLs for each item
 const urls = [
   'https://example.com',      // Item 1
   'https://google.com',       // Item 2
@@ -44,22 +42,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
     // Get the URL associated with the selected item
     const url = urls[selectedIndex];
-    // Navigate to the selected URL
+    // Open the selected URL in the current tab
     window.location.href = url;
   }
-});
-
-// Escape key to return to the main menu (grid view)
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    // Hide the web view and show the grid again
-    webView.style.display = 'none';
-    document.querySelector('.container').style.display = 'flex';
-  }
-});
-
-// Go back button to return to the main menu
-backButton.addEventListener('click', () => {
-  webView.style.display = 'none';
-  document.querySelector('.container').style.display = 'flex';
 });
