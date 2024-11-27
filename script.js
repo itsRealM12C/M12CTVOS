@@ -3,7 +3,7 @@ let selectedIndex = 0;
 
 // URLs for iframe content
 const urls = [
-  'https://example.com',      // APP 1
+  'https://youtube.com/tv?env_forceFullAnimation=1',      // YouTube
   'https://google.com',       // APP 2
   'https://youtube.com',      // APP 3
   'https://github.com',       // APP 4
