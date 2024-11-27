@@ -41,6 +41,18 @@ body {
   transition: all 0.3s ease;
 }
 
+ overflow: hidden; /* Ensures that the image fills the button without spilling */
+  border: 2px solid white;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.app-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the button */
+}
+
 /* Highlighted (selected) app */
 .app.selected {
   border: 4px solid #80bfff; /* Prominent blue border */
