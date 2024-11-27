@@ -4,10 +4,10 @@ let selectedIndex = 0;
 // URLs for iframe content
 const urls = [
   'https://youtube.com/tv?env_forceFullAnimation=1',      // YouTube
-  'https://google.com',       // APP 2
-  'https://youtube.com',      // APP 3
-  'https://github.com',       // APP 4
-  'https://facebook.com',     // APP 5
+  'https://msx.benzac.de/android.html',       // Media Station X
+  'https://tv.tiktok.com/tizen',      // TikTok
+  'https://apps.tvgam.es/tv_games/vizio_portal/production/portal/index.html',       // TV Games
+  'https://devices.mytuner.mobi/?group=tizen',     // myTuner Radio
 ];
 
 // Set initial selection
