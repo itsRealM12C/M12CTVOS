@@ -10,10 +10,10 @@ body {
   background: linear-gradient(to bottom, #4a4a4a, #2e2e2e);
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   overflow: hidden;
+  position: relative;
 }
 
 /* App container positioned at the bottom */
@@ -21,22 +21,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding-bottom: 50px; /* Adjusts spacing from bottom */
+  gap: 40px; /* Increased spacing between app buttons */
+  position: absolute;
+  bottom: 50px; /* Positioning the app row near the bottom */
 }
 
-/* App buttons with larger size */
+/* App buttons with larger size and TV-like style */
 .app {
-  width: 200px;  /* Larger width */
-  height: 150px; /* Larger height */
+  width: 250px;  /* Wider */
+  height: 150px; /* Taller */
   background-color: #808080;
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
+  border: 3px solid white;
   border-radius: 10px;
-  font-size: 24px; /* Larger font */
+  font-size: 24px; /* Larger font for better visibility */
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -44,9 +45,9 @@ body {
 
 /* Highlighted (selected) app */
 .app.selected {
-  border: 4px solid #80bfff; /* Prominent border for focus */
-  transform: scale(1.2); /* Larger scaling effect */
-  background-color: #666666; /* Slightly darker background */
+  border: 4px solid #80bfff; /* Prominent blue border */
+  transform: scale(1.3);     /* Larger scaling effect */
+  background-color: #666666;
 }
 
 /* Iframe fullscreen container */
