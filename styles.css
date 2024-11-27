@@ -8,24 +8,27 @@
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to bottom, #4a4a4a, #2e2e2e);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   overflow: hidden;
 }
 
+/* App container positioned at the bottom */
 .app-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  overflow: hidden;
+  padding-bottom: 50px; /* Adjusts spacing from bottom */
 }
 
+/* App buttons with larger size */
 .app {
-  width: 150px;
-  height: 100px;
+  width: 200px;  /* Larger width */
+  height: 150px; /* Larger height */
   background-color: #808080;
   color: black;
   display: flex;
@@ -33,7 +36,7 @@ body {
   align-items: center;
   border: 2px solid white;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 24px; /* Larger font */
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -41,8 +44,9 @@ body {
 
 /* Highlighted (selected) app */
 .app.selected {
-  border: 3px solid #80bfff;
-  transform: scale(1.1);
+  border: 4px solid #80bfff; /* Prominent border for focus */
+  transform: scale(1.2); /* Larger scaling effect */
+  background-color: #666666; /* Slightly darker background */
 }
 
 /* Iframe fullscreen container */
