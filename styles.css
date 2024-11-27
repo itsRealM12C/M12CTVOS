@@ -1,3 +1,4 @@
+/* Basic reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,81 +7,66 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #111;
-  color: #fff;
+  background: linear-gradient(to bottom, #4a4a4a, #2e2e2e);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  flex-direction: column;
   overflow: hidden;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  z-index: 10;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.box {
-  width: 250px;
-  height: 200px;
-  background-color: #333;
+.app-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
-  font-size: 28px;
-  color: white;
-  font-weight: bold;
-  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-  position: relative;
+  gap: 20px;
   overflow: hidden;
 }
 
-.box.selected {
-  background-color: #ff6347;
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(255, 99, 71, 0.6);
+.app {
+  width: 150px;
+  height: 100px;
+  background-color: #808080;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+/* Highlighted (selected) app */
+.app.selected {
+  border: 3px solid #80bfff;
+  transform: scale(1.1);
+}
+
+/* Iframe fullscreen container */
 .iframe-container {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  z-index: 100;
 }
 
 #back-button {
   margin-bottom: 20px;
   padding: 10px 20px;
   font-size: 18px;
-  background-color: #ff6347;
-  color: #fff;
+  background-color: #80bfff;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-#back-button:hover {
-  background-color: #ff4500;
-}
-
-iframe {
-  border-radius: 15px;
 }
