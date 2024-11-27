@@ -35,10 +35,11 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-    document.addEventListener('keydown',function(e){
-     if (typeof VK_BACK === 'undefined') VK_BACK = 461;
-        closeIframe();
-})
+// Handle "Back" button and "Escape" key to return to main screen
+document.getElementById('back-button').addEventListener('click', closeIframe);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeIframe();
+});
 
 function closeIframe() {
   document.getElementById('iframe-container').style.display = 'none';
